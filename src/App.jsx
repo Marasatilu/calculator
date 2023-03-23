@@ -24,7 +24,12 @@ function App() {
       const setCurrentValue = (buttonValue) => {
         if (buttonValue === ".") {
           console.log("me he reseteado");
-          setCurrentValue(".");
+          if (currentValue === "0") {
+           setCurrentValue((currentValue + "."));
+          }
+          else (currentValue === "."); {
+            return;
+          }
           return;
         }}
 
