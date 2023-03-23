@@ -14,12 +14,28 @@ function App() {
       return;
     }
 
+    const handleButtonClick = (buttonValue) => {
+      if (buttonValue === "+-") {
+        console.log("me he reseteado");
+        setCurrentValue((currentValue * -1).toString());
+        return;
+      }}
+
+      const setCurrentValue = (buttonValue) => {
+        if (buttonValue === ".") {
+          console.log("me he reseteado");
+          setCurrentValue(".");
+          return;
+        }}
+
     if (currentValue === "0") {
       setCurrentValue(buttonValue);
     } else {
+      console.log(currentValue, buttonValue);
       setCurrentValue(currentValue + buttonValue);
     }
   };
+
 
   return (
     <div className="calculator">
